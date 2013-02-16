@@ -1,0 +1,82 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xnoise-media-player</Name>
+        <Homepage>http://www.xnoise-media-player.com</Homepage>
+        <Packager>
+            <Name>Pardus ANKA Admins</Name>
+            <Email>pisiciftligi@pardus-linux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>xnoise-media-player</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Xnoise is a media player for GTK+ with an intuitive user interface, great speed and lots of features.</Summary>
+        <Description>Xnoise allows listening to music and playing video in a very intuitive way: You can easily search the library and drag each artist, album or title to the tracklist (to any position in any order).</Description>
+        <Archive sha1sum="dcb2f88a668d45d42ffd63b6877c68b530203818" type="targz">https://bitbucket.org/shuerhaaken/xnoise/downloads/xnoise-0.2.15.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>gst-plugins-base-devel</Dependency>
+            <Dependency>sqlite-devel</Dependency>
+            <Dependency>taglib-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>xnoise-media-player</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>glib2</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>sqlite</Dependency>
+            <Dependency>taglib</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libxml2</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/xnoise</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>xnoise-media-player-devel</Name>
+        <Summary>xnoise-media-player için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency>xnoise-media-player</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2013-02-16</Date>
+            <Version>0.2.15</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>
+    </History>
+</PISI>

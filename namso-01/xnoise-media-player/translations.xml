@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xnoise-media-player</Name>
+        <Summary xml:lang="en">Xnoise is a media player for GTK+ with an intuitive user interface, great speed and lots of features.</Summary>
+        <Description xml:lang="en">Xnoise allows listening to music and playing video in a very intuitive way: You can easily search the library and drag each artist, album or title to the tracklist (to any position in any order).</Description>
+    </Source>
+
+    <Package>
+        <Name>xnoise-media-player-devel</Name>
+        <Summary xml:lang="tr">xnoise-media-player için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>
