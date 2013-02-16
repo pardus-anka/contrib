@@ -1,0 +1,11 @@
+--- a/utils.mk    2013-01-10 02:22:32.000000000 +0200
++++ b/utils.mk        2013-02-12 00:14:44.760355843 +0200
+@@ -135,7 +135,7 @@
+ # the source tarball
+ ##############################################################################
+ 
+-PREFIX ?= /usr/local
++PREFIX ?= /usr
+ 
+ BINDIR = $(DESTDIR)$(PREFIX)/bin
+ MANDIR = $(DESTDIR)$(PREFIX)/share/man/man1 
