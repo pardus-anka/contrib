@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>flashplugin</Name>
+        <Homepage>http://labs.adobe.com/technologies/flashplayer10</Homepage>
+        <Packager>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Packager>
+        <License>Macromedia</License>
+        <IsA>library</IsA>
+        <Summary>Adobe Flash Player</Summary>
+        <Description>Adobe (Macromedia) Flash Player is an application to present interactive (and possibly multimedia-containing) content created using Adobe Flash.</Description>
+        <Archive sha1sum="2327e88f34877c460f751f996f77476e770a35ca" type="tarxz" target="i686">http://dl.dropbox.com/u/71264624/flashplugin-11.2.202.270-i386.tar.xz</Archive>
+        <Archive sha1sum="15e837153b394b93f7a06719d93d14acbe3aa1c3" type="tarxz" target="x86_64">http://dl.dropbox.com/u/71264624/flashplugin-11.2.202.270-x86_64.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>flashplugin</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>nss</Dependency>
+            <Dependency>nspr</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="57" type="security">
+            <Date>2013-02-09</Date>
+            <Version>11.2.202.270</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Idris Kalp</Name>
+            <Email>yaralikurt15@gmail.com</Email>
+        </Update>
+      <Update release="56" type="security">
+            <Date>2013-02-09</Date>
+            <Version>11.2.202.262</Version>
+            <Comment>Version Bump</Comment>
+            <Name>Idris Kalp</Name>
+            <Email>yaralikurt15@gmail.com</Email>
+        </Update>
+      <Update release="1" type="security">
+            <Date>2013-01-09</Date>
+            <Version>11.2.202.261</Version>
+            <Comment>First release</Comment>
+            <Name>Erdinç Gültekin</Name>
+            <Email>erdincgultekin@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

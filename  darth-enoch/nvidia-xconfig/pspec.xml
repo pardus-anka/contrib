@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>nvidia-xconfig</Name>
+        <Homepage>http://www.nvidia.com</Homepage>
+        <Packager>
+            <Name>Pardus ANKA Admins</Name>
+            <Email>pisiciftligi@pardus-linux.org</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>The NVIDIA X Configuration Tool</Summary>
+        <Description>The NVIDIA X Configuration Tool</Description>
+        <Archive sha1sum="8d06778087a2cffb20c414c7c9864dc73ea8ce7f" type="tarbz2">ftp://download.nvidia.com/XFree86/nvidia-xconfig/nvidia-xconfig-313.09.tar.bz2</Archive>
+	<Patches>
+	  <Patch level="1">prefix.diff</Patch>
+	</Patches>
+    </Source>
+
+    <Package>
+        <Name>nvidia-xconfig</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/nvidia-bug-report.sh">nvidia-bug-report.sh</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+      <Update release="10">
+            <Date>2012-11-15</Date>
+            <Version>313.09</Version>
+            <Comment>Güncellendi.</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>namso-01@hotmail.it</Email>
+        </Update>
+        <Update release="9">
+            <Date>2012-01-03</Date>
+            <Version>290.10</Version>
+            <Comment>New stable release for the newest Nvidia 290.10 drivers</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="8">
+            <Date>2011-08-19</Date>
+            <Version>280.13</Version>
+            <Comment>New stable release for the newest Nvidia 280.13 drivers</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2011-08-01</Date>
+            <Version>275.21</Version>
+            <Comment>New stable release for the newest Nvidia 275.21 drivers</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="6">
+            <Date>2011-06-20</Date>
+            <Version>275.09.07</Version>
+            <Comment>New stable release for the newest Nvidia 275.09.07 drivers</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2011-05-24</Date>
+            <Version>270.41.19</Version>
+            <Comment>New stable release for the newest Nvidia 270.41.19 release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2011-04-12</Date>
+            <Version>270.41.03</Version>
+            <Comment>New stable release for the newest Nvidia 270.41.03 release</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-10-18</Date>
+            <Version>260.19.12</Version>
+            <Comment>Version bump, ready for 2011</Comment>
+            <Name>Fatih Arslan</Name>
+            <Email>farslan@pardus.org.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2008-05-29</Date>
+            <Version>173.14.05</Version>
+            <Comment>Version bump</Comment>
+            <Name>Fatih Aşıcı</Name>
+            <Email>fatih@pardus.org.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2008-03-29</Date>
+            <Version>1.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Fatih Aşıcı</Name>
+            <Email>fatih@pardus.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
