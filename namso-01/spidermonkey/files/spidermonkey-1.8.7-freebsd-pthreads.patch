@@ -1,0 +1,10 @@
+--- config/system-headers.OSmanOS        2012-04-07 00:24:49.000000000 +0300
++++ config/system-headers                2013-02-14 20:45:34.612622316 +0200
+@@ -595,6 +595,7 @@
+ psap.h
+ Pt.h
+ pthread.h
++pthread_np.h
+ pwd.h
+ Python.h
+ QDOffscreen.h
