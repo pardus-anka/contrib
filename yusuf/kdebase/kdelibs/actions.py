@@ -7,7 +7,6 @@
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import kde4
-from pisi.actionsapi import qt4
 from pisi.actionsapi import get
 
 NoStrip=["/usr/share"]
@@ -18,8 +17,6 @@ def setup():
                     -DCMAKE_SKIP_RPATH=ON \
                     -DWITH_FAM=ON \
                     -DWITH_HUpnp=ON")
-    #kde4.configure("-DKDE4_ENABLE_FINAL=ON -DKDE_DISTRIBUTION_TEXT=\"Pardus\"")
-    #kde4.configure("-DKDE_DISTRIBUTION_TEXT=\"Pardus\" -DCMAKE_BUILD_TYPE=debugfull")
 
 def build():
     kde4.make()

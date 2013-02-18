@@ -64,21 +64,6 @@
             <Dependency>openexr-devel</Dependency>
         </BuildDependencies>
         <Patches>
-<!--             <Patch level="1">fedora/kdelibs-4.9.2-FindSamba_samba4.patch</Patch> 
-            <Patch level="1">fedora/kdelibs-4.10.0-branding.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.10.0-kde149705.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.10.0-kstandarddirs.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.10.0-no_rpath.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.10.0-SOLID_UPNP.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.10.0-xdg-menu.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.1.70-cmake.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.9.3-kcm_ssl.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.9.95-parallel_devel.patch</Patch>
-            <Patch level="1">fedora/kdelibs-4.9.97-libexecdir.patch</Patch>
-            <Patch level="1">fedora/kdelibs-solid_qt_no_debug_output.patch</Patch>
-            <Patch level="1">fedora/kdelibs-udisks2_2_stage.patch</Patch>-->
-
-            <!-- Pardus patches-->
             <Patch level="1">pardus/default-useragent.diff</Patch>
     
             <!-- Show Delete entry in context menus -->
@@ -195,9 +180,16 @@
     </Package>
 
     <History>
-        <Update release="1">
-            <Date>2012-01-06</Date>
+        <Update release="2">
+            <Date>2013-02-15</Date>
             <Version>4.10.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Yusuf Aydemir</Name>
+            <Email>yusuf.aydemir@istanbul.com</Email>
+        </Update>      
+        <Update release="1">
+            <Date>2013-01-19</Date>
+            <Version>4.9.98</Version>
             <Comment>First release</Comment>
             <Name>Yusuf Aydemir</Name>
             <Email>yusuf.aydemir@istanbul.com</Email>
