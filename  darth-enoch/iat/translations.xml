@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>iat</Name>
+        <Summary xml:lang="tr">ISO kalıp dönüştürücü.</Summary>
+	<Description xml:lang="tr">ISO9660 Analyzer Tool, pek çok CD/DVD kalıp dosyasından ISO dosyalarına dönüştürme yapabilen bir programdır.</Description>
+    </Source>
+</PISI>
