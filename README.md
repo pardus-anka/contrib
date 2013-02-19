@@ -1,4 +1,4 @@
 contrib
 =======
 
-Anka contrib katkıcı deposu
+Playgrounds for Pardus ANKA developers
