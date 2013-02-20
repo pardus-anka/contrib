@@ -9,7 +9,8 @@
             <Email>pisiciftligi@gmail.com</Email>
         </Packager>
         <License>GPLv3</License>	
-        <IsA>app:console</IsA>
+        <IsA>app:gui</IsA>
+        <Icon>xpra</Icon>
         <Summary>Persistent remote applications for X</Summary>
         <Description>Xpra gives you "persistent remote applications" for X. That is, unlike normal X applications, applications run with xpra are "persistent" -- you can run them remotely, and they don't die if your connection does.</Description>
         <Archive sha1sum="e716c4d5df7a2bee92670a8ae2a4e8a461980841" type="tarxz">http://xpra.org/src/xpra-0.8.5.tar.xz</Archive>
