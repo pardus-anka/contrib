@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>media-player-info</Name>
+        <Summary xml:lang="tr">Data files describing media player capabilities, for post-HAL systems</Summary>
+        <Description xml:lang="tr">Data files describing media player capabilities, for post-HAL systems</Description>
+    </Source>
+</PISI>

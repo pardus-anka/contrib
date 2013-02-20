@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>media-player-info</Name>
+        <Homepage>http://cgit.freedesktop.org/media-player-info</Homepage>
+        <Packager>
+            <Name>Yusuf Aydemir</Name>
+            <Email>yusuf.aydemir@istanbul.com</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <Summary>Data files describing media player capabilities, for post-HAL systems</Summary>
+        <Description>Data files describing media player capabilities, for post-HAL systems</Description>
+        <Archive sha1sum="30266c341d6639b9b38b5640d1bfd7deb1535a74" type="zip">http://cgit.freedesktop.org/media-player-info/snapshot/media-player-info-17.zip</Archive>
+    </Source>
+
+    <Package>
+        <Name>media-player-info</Name>
+        <Files>
+            <Path fileType="library">/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-20</Date>
+            <Version>17</Version>
+            <Comment>First release</Comment>
+            <Name>Yusuf Aydemir</Name>
+            <Email>yusuf.aydemir@istanbul.com</Email>
+        </Update>
+    </History>
+</PISI>
