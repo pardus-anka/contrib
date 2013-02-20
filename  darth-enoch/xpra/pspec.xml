@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>xpra</Name>
+        <Homepage>http://xpra.org/</Homepage>
+        <Packager>
+            <Name>Pardus ANKA Admins</Name>
+            <Email>pisiciftligi@gmail.com</Email>
+        </Packager>
+        <License>GPLv3</License>	
+        <IsA>app:console</IsA>
+        <Summary>Persistent remote applications for X</Summary>
+        <Description>Xpra gives you "persistent remote applications" for X. That is, unlike normal X applications, applications run with xpra are "persistent" -- you can run them remotely, and they don't die if your connection does.</Description>
+        <Archive sha1sum="e716c4d5df7a2bee92670a8ae2a4e8a461980841" type="tarxz">http://xpra.org/src/xpra-0.8.5.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>dbus-python</Dependency>
+	    <Dependency versionFrom="0.16">cython</Dependency>
+            <Dependency>python-gtk-devel</Dependency>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>xorg-server-xvfb</Dependency>
+            <Dependency>xorg-server-devel</Dependency>
+	    <Dependency>xorg-util</Dependency>	    
+        </BuildDependencies>	
+    </Source>
+
+    <Package>
+        <Name>xpra</Name>
+        <RuntimeDependencies>
+            <Dependency>dbus-python</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-imaging</Dependency>
+            <Dependency>xorg-server-xvfb</Dependency>
+            <Dependency>xorg-server</Dependency>
+	    <Dependency>xorg-util</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+	    <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/parti</Path>
+	    <Path fileType="data">/usr/share/icons</Path>
+	    <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/xpra</Path>
+	    <Path fileType="data">/usr/share/wimpiggy</Path>            
+	    <Path fileType="doc">/usr/share/man</Path>
+	    <Path fileType="doc">/usr/share/doc</Path>
+	    <Path fileType="config">/etc/xpra</Path>
+        </Files>
+    </Package>
+
+    <History>        
+        <Update release="1">
+            <Date>2013-02-20</Date>
+            <Version>0.8.5</Version>
+            <Comment>First release</Comment>
+            <Name>Idris Kalp</Name>
+            <Email>yaralikurt15@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

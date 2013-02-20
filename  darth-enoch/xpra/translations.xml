@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>xpra</Name>
+        <Summary xml:lang="tr">Devamlı uzak uygulamalar.</Summary>
+        <Description xml:lang="tr">Xpra, X pencere sistemi için uzaktan çalışan devamlı uygulamalar sağlar. Bu, normal X uygulamaları gibi değildir, Xpra ile çalışan uygulamalar "devamlı"dır. Onları uzaktan çalıştırırsınız ve bağlantı kopmadıkça ölmezler.</Description>
+    </Source>
+</PISI>
