@@ -19,7 +19,7 @@
             <Dependency>kde-baseapps-devel</Dependency>
         </BuildDependencies>
         <Patches>
-<!--             <Patch>konsole-4.8.0-disable-ctrl-drag.diff</Patch> -->
+<!--           <Patch level="1"></Patch> -->
         </Patches>
     </Source>
 
