@@ -2,7 +2,7 @@
 <!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
 <PISI>
     <Source>
-        <Name>kdebase-artwork</Name>
+        <Name>kde-base-artwork</Name>
         <Homepage>http://www.kde.org</Homepage>
         <Packager>
             <Name>Pardus ANKA Admins</Name>
@@ -10,26 +10,16 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:gui</IsA>
-        <Summary>KDE4 Base artwork for Plasma Workplace.</Summary>
-        <Description>This package contains artwork for a basic KDE Workspace installation.</Description>
+        <Summary>KDE KSplash theme.</Summary>
+        <Description>KDE KSplash theme.</Description>
         <Archive sha1sum="45c5f86445704d4bc7d8f6922eb621ce3bfff5e2" type="tarxz">mirrors://kde/stable/4.10.0/src/kde-base-artwork-4.10.0.tar.xz</Archive>
         <BuildDependencies>
             <Dependency versionFrom="4.10.0">kdelibs-devel</Dependency>
-            <Dependency versionFrom="4.10.0">kde-runtime</Dependency>
-            <Dependency versionFrom="4.10.0">kde-baseapps</Dependency>
-           
         </BuildDependencies>
      </Source>
     
      <Package>
-        <Name>kdebase-artwork</Name>
-        <RuntimeDependencies>
-            <Dependency versionFrom="4.10.0">kdelibs</Dependency>
-            <Dependency versionFrom="4.10.0">kdepimlibs</Dependency>
-            <!-- needed by printer configuration GUI system-config-printer-kde -->
-            <Dependency>system-config-printer</Dependency>
-            <Dependency>python-cups</Dependency>
-        </RuntimeDependencies>
+        <Name>kde-base-artwork</Name>
         <Files>            
             <Path fileType="data">/usr/share/kde4</Path>
             <Path fileType="doc">/usr/share/doc</Path>
