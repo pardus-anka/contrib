@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>draftsight</Name>
+        <Homepage>http://www.plexapp.com</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Packager>
+        <License>GPL</License>
+        <Summary>Plex media server: Bilgisayardaki media dosyalarını televizyondan izlemeye yarar.</Summary>
+        <Description>Plex tüm medyalaranızı düzenlemenize ve desteklenen tüm ortamlara aktarmanıza olanak sağlayan bir medya çözüm projesidir. </Description>
+        <Archive sha1sum="cf72d0706608f180e344c5a94a352ce74b31bfd8" type="binary">http://dl-ak.solidworks.com/nonsecure/draftsight/V1R3.1/draftSight.deb</Archive>
+    </Source>
+
+    <Package>
+        <Name>draftsight</Name>
+        <RuntimeDependencies>
+            <Dependency>avahi</Dependency>
+            <Dependency>rsync</Dependency>
+            <Dependency>apache</Dependency>
+            <Dependency>firefox</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr</Path>
+            <Path fileType="data">/opt</Path>
+            <Path fileType="data">/var</Path>
+        </Files>
+	<!--<AdditionalFiles>
+	    <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/plexmediamanager.desktop">plexmediamanager.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/plex-start.desktop">plex-start.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/plexstart.png">plexstart.png</AdditionalFile>
+	</AdditionalFiles>-->
+        mesa-glu
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-19</Date>
+            <Version>1.2.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>minidlna</Name>
+        <Homepage>http://sourceforge.net/projects/minidlna/</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <License>BSD</License>
+        <Icon>minidlna</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>DLNA/UPnP-AV compliant media server</Summary>
+        <Description>MiniDLNA (aka ReadyDLNA) is server software with the aim of being fully compliant with DLNA/UPnP-AV clients. It is developed by a NETGEAR employee for the ReadyNAS product line. So if you are looking for a NAS, please consider ReadyNAS first!.</Description>
+        <Archive sha1sum="33742f02367006c6e4af7128b91c830026e59b9f"  type="targz">http://sourceforge.net/projects/minidlna/files/minidlna/1.0.25/minidlna_1.0.25_src.tar.gz</Archive>
+        <BuildDependencies>
+             <Dependency>flac-devel</Dependency>
+             <Dependency>sqlite-devel</Dependency>
+             <Dependency>libexif-devel</Dependency>
+             <Dependency>libid3tag-devel</Dependency>
+             <Dependency>libogg-devel</Dependency>
+             <Dependency>libvorbis-devel</Dependency>
+             <Dependency>ffmpeg-devel</Dependency>
+             <Dependency>jpeg-devel</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="0">minidlna-1.0.18-Makefile.patch</Patch>
+            <Patch level="1">minidlna-1.0.25-ffmpeg.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>minidlna</Name>
+        <RuntimeDependencies>
+             <Dependency>flac</Dependency>
+             <Dependency>sqlite</Dependency>
+             <Dependency>libexif</Dependency>
+             <Dependency>libid3tag</Dependency>
+             <Dependency>libogg</Dependency>
+             <Dependency>libvorbis</Dependency>
+             <Dependency>ffmpeg</Dependency>
+             <Dependency>jpeg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man1/minidlna.1">minidlna.1</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/man/man5/minidlna.conf.5">minidlna.conf.5</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2013-02-19</Date>
+	    <Version>1.0.25</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>   
+    </History>
+</PISI>
