@@ -1,0 +1,88 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vino</Name>
+        <Homepage>https://live.gnome.org/Vino</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A remote desktop system for GNOME</Summary>
+        <Description>Vino is a VNC server that allows remote users to connect to a running GNOME session using VNC.</Description>
+        <Archive sha1sum="5233498da7e9c6b8f4c998a8c4eaa5c57045555a" type="tarxz">mirrors://gnome/vino/3.6/vino-3.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>avahi-devel</Dependency>
+            <Dependency>libgcrypt-devel</Dependency>
+            <Dependency>libsoup-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gnutls-devel</Dependency>
+            <Dependency>libXdamage-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>libXtst-devel</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>libXft-devel</Dependency>
+            <Dependency>avahi-glib-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>libXfixes-devel</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>jpeg-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vino</Name>
+        <RuntimeDependencies>
+            <Dependency>avahi</Dependency>
+            <Dependency>libgcrypt</Dependency>
+            <Dependency>libsoup</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>libXdamage</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXtst</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>avahi-glib</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>libXfixes</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>jpeg</Dependency>
+       </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/vino</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

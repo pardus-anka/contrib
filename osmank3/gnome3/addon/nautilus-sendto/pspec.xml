@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>nautilus-sendto</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>A nautilus extension for sending files to locations</Summary>
+        <Description>Nautilus-sendto is a Nautilus context menu for sending files.</Description>
+        <Archive sha1sum="f907d01626ca40e02df441972f326ec7a4a83a48" type="tarxz">mirrors://gnome/nautilus-sendto/3.6/nautilus-sendto-3.6.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>evolution-data-server-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>nautilus-sendto</Name>
+        <RuntimeDependencies>
+            <Dependency>nautilus</Dependency>
+            <Dependency>evolution-data-server</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path> 
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>nautilus-sendto-devel</Name>
+        <Summary>Development files for nautilus-sendto</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">nautilus-sendto</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/nautilus-sendto</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

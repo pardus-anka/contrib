@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>anjuta</Name>
+        <Homepage>http://anjuta.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>anjuta</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Versatile Integrated Development Environment (IDE) for C and C++ on GNU/Linux</Summary>
+        <Description>Anjuta DevStudio is a versatile Integrated Development Environment (IDE) on GNOME Desktop Environment and features a number of advanced programming facilities. These include project management, application and class wizards, an on-board interactive debugger, powerful source editor, syntax highlighting, intellisense autocompletions, symbol navigation, version controls, integrated GUI designing and other tools.</Description>
+        <Archive sha1sum="d521aea301ca9c428a8b627c9fa491cba5d5e17c" type="tarxz">mirrors://gnome/anjuta/3.6/anjuta-3.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>autogen</Dependency>
+            <Dependency>devhelp</Dependency>
+            <Dependency>libgda-devel</Dependency>
+            <Dependency>vala-devel</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>libgnome</Dependency>
+            <Dependency>libgnomeui</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency versionFrom="3.0.0">gdl-devel</Dependency>
+            <Dependency>glade-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>graphviz</Dependency>
+            <Dependency>gtksourceview</Dependency>
+            <Dependency>subversion</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>vte-devel</Dependency>
+            <Dependency>webkit-gtk-devel</Dependency>
+            <Dependency>libgda-devel</Dependency>
+            <Dependency>neon-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>anjuta</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>vala</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>webkit-gtk</Dependency>
+            <Dependency>autogen</Dependency>
+            <Dependency>devhelp</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>libgnome</Dependency>
+            <Dependency>libgnomeui</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency versionFrom="3.0.0">gdl</Dependency>
+            <Dependency>glade</Dependency>
+            <Dependency>graphviz</Dependency>
+            <Dependency>gtksourceview</Dependency>
+            <Dependency>subversion</Dependency>
+            <Dependency>valgrind</Dependency>
+            <Dependency>vte</Dependency>
+            <Dependency>libgda</Dependency>
+            <Dependency>apr</Dependency>
+            <!-- <Dependency>yelp</Dependency> For help menu -->
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/glade3</Path>
+            <Path fileType="data">/usr/share/anjuta</Path>
+            <Path fileType="data">/usr/share/mime</Path>
+        </Files>
+   </Package>
+
+    <Package>
+        <Name>anjuta-devel</Name>
+        <Summary>Development files for anjuta</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">anjuta</Dependency>
+            <Dependency>gdl-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>anjuta-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Documents for anjuta</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+   <History>
+       <Update release="1">
+           <Date>2013-02-21</Date>
+           <Version>3.6.2</Version>
+           <Comment>First release</Comment>
+           <Name>Osman Karagöz</Name>
+           <Email>osmank3@gmail.com</Email>
+       </Update>
+    </History>
+</PISI>

@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PSPEC SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libwnck</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>A window navigation construction kit</Summary>
+        <Description>libwnck (pronounced "libwink") is used to implement pagers, tasklists, and other such things. It allows applications to monitor information about open windows, workspaces, their names/icons, and so forth.</Description>
+        <Archive sha1sum="955e7a2d33a4bcd7fe11b91a0948cdfcc6680fa2" type="tarxz">mirrors://gnome/libwnck/3.4/libwnck-3.4.5.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>libXres-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libwnck</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXres</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>startup-notification</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>libwnck-devel</Name>
+        <Summary>Development files for libwnck</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">libwnck</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXres-devel</Dependency>
+            <Dependency>startup-notification-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin/wnckprop</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/girepository-1.0</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-22</Date>
+            <Version>3.4.5</Version>
+            <Comment>First release.</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

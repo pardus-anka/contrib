@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-user-share</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>CCPL-Attribution-ShareAlike-3.0</License>
+        <IsA>data</IsA>
+        <Summary>Gnome User Shares</Summary>
+        <Description>gnome-user-share.</Description>
+        <Archive sha1sum="28862c2494d7f5a62faa908c3d62c8532bc6e952" type="tarxz">mirrors://gnome/gnome-user-share/3.0/gnome-user-share-3.0.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-bluetooth-devel</Dependency>
+            <Dependency versionFrom="3.0.0">libunique-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>nautilus-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libcanberra-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-user-share</Name>
+        <RuntimeDependencies>
+            <Dependency>gnome-bluetooth</Dependency>
+            <Dependency versionFrom="3.0.0">libunique</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>nautilus</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/gnome/help</Path>
+            <Path fileType="config">/etc/gconf/schemas</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/gnome-user-share</Path>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.0.4</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

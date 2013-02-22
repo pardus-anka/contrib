@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-user-docs</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>CCPL-Attribution-ShareAlike-3.0</License>
+        <IsA>data:doc</IsA>
+        <Summary>Gnome User Documents</Summary>
+        <Description>gnome-user-docs contains user documents for Gnome3 desktop.</Description>
+        <Archive sha1sum="3600f135829fcc97d5e6bf088b3743d4add9ebf5" type="tarxz">mirrors://gnome/gnome-user-docs/3.6/gnome-user-docs-3.6.2.tar.xz</Archive>
+    </Source>
+
+    <Package>
+        <Name>gnome-user-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gnome/help/gnome-help</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

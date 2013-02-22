@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-bluetooth</Name>
+        <Homepage>https://live.gnome.org/GnomeBluetooth</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Fork of bluez-gnome</Summary>
+        <Description>gnome-bluetooth is a fork of bluez-gnome focused on integration with GNOME.</Description>
+        <Archive sha1sum="2248c0b0f575782ba4a7a50470a6ce517debaf0f" type="tarxz">mirrors://gnome/gnome-bluetooth/3.6/gnome-bluetooth-3.6.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gnome-control-center-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-bluetooth</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gnome-control-center</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/icons/hicolor</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/gnome-bluetooth</Path>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+            <Path fileType="data">/usr/share/glib-2.0/schemas</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gnome/help</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-bluetooth-devel</Name>
+        <Summary>Development files for gnome-bluetooth</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-bluetooth</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+            <Path fileType="data">/usr/share/gir-1.0</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2013-02-20</Date>
+            <Version>3.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

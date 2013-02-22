@@ -1,0 +1,119 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>empathy</Name>
+        <Homepage>http://live.gnome.org/Empathy</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <License>LGPLv2+</License>
+        <Icon>empathy</Icon>
+        <Summary>Advanced instant messaging client</Summary>
+        <Description>Empathy is a powerful multi-protocol instant messaging client which supports Jabber, GTalk, MSN, IRC, Salut, and other protocols. It is built on top of the Telepathy framework.</Description>
+        <Archive sha1sum="d1c82c3395040f07e62743114af7339000195459" type="tarxz">mirrors://gnome/empathy/3.6/empathy-3.6.3.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>python-gtk-devel</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>gtk-doc</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency versionFrom="1.4.0">webkit-gtk-devel</Dependency>
+            <Dependency versionFrom="3.0.0">icon-theme-gnome</Dependency>
+            <Dependency>gnome-keyring</Dependency>
+            <Dependency>farsight2</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>enchant-devel</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency versionFrom="0.15.1">telepathy-glib</Dependency>
+            <Dependency versionFrom="0.2.10">telepathy-logger</Dependency>
+            <Dependency versionFrom="0.0.14">telepathy-farsight</Dependency>
+            <Dependency versionFrom="2.32.1">evolution-data-server</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency versionFrom="0.5.1">folks-devel</Dependency>
+            <Dependency>farsight2-devel</Dependency>
+            <Dependency>telepathy-farsight-devel</Dependency>
+            <Dependency>libgee-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>empathy</Name>
+        <IsA>app:gui</IsA>
+        <RuntimeDependencies>
+            <Dependency>gtk3</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>gnome-keyring</Dependency>
+            <Dependency versionFrom="1.4.0">webkit-gtk</Dependency>
+            <Dependency versionFrom="3.0.0">icon-theme-gnome</Dependency>
+            <Dependency>farsight2</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>enchant</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency versionFrom="0.15.1">telepathy-glib</Dependency>
+            <Dependency versionFrom="0.2.10">telepathy-logger</Dependency>
+            <Dependency versionFrom="0.0.14">telepathy-farsight</Dependency>
+            <Dependency>telepathy-gabble</Dependency>
+            <Dependency>telepathy-mission-control</Dependency>
+            <Dependency versionFrom="2.32.1">evolution-data-server</Dependency>
+            <Dependency>NetworkManager</Dependency>
+            <Dependency>gnutls</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>gnome-control-center</Dependency>
+            <Dependency versionFrom="0.5.1">folks</Dependency>
+            <Dependency>telepathy-salut</Dependency>
+            <Dependency>libgee</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/empathy</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/telepathy</Path>
+            <Path fileType="doc">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>empathy-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>Help files of Empathy instant messaging client</Summary>
+        <Files>
+            <Path fileType="doc">/usr/share/gnome/help</Path>
+            <Path fileType="doc">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.3</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,40 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-devel-docs</Name>
+        <Homepage>http://www.gnome.org</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GFDLv1.1</License>
+        <IsA>data:doc</IsA>
+        <Summary>Gnome Developer Documents</Summary>
+        <Description>gnome-devel-docs provides documentation for developing for the GNOME desktop environment.</Description>
+        <Archive sha1sum="455de590f6fa476a501dabac47e1a4b48e9885d4" type="tarxz">mirrors://gnome/gnome-devel-docs/3.6/gnome-devel-docs-3.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gnome-doc-utils</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-devel-docs</Name>
+        <Files>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/gnome/help</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-06-03</Date>
+            <Version>3.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

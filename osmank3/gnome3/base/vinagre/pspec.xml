@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>vinagre</Name>
+        <Homepage>http://projects.gnome.org/vinagre</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>vinagre</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>A VNC and SSH client</Summary>
+        <Description>Vinagre is a remote desktop viewer and SSH client for the GNOME Desktop.</Description>
+        <Archive sha1sum="380f7f7197d062f4db78365ab1b8e3115476e3a2" type="tarxz">mirrors://gnome/vinagre/3.6/vinagre-3.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>gnome-panel-devel</Dependency>
+            <Dependency versionFrom="0.4.3">gtk-vnc-devel</Dependency>
+            <Dependency>vino</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>avahi-ui-devel</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>vte-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>avahi-glib-devel</Dependency>
+            <Dependency>telepathy-glib-devel</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>vinagre</Name>
+        <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>gnome-panel</Dependency>
+            <Dependency versionFrom="0.4.3">gtk-vnc</Dependency>
+            <Dependency>vino</Dependency>
+            <Dependency>avahi-ui</Dependency>
+            <Dependency>vte</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libpeas</Dependency>
+            <Dependency>avahi-libs</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>avahi-glib</Dependency>
+            <Dependency>telepathy-glib</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/vinagre</Path>
+            <Path fileType="data">/usr/share/vinagre-1</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>vinagre-devel</Name>
+        <Summary>Development files for vinagre</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">vinagre</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

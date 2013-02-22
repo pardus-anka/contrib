@@ -1,0 +1,87 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>brasero</Name>
+        <Homepage>http://projects.gnome.org/brasero/</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop</Summary>
+        <Description>Brasero (aka Bonfire) is yet another application to burn CD/DVD for the gnome desktop.</Description>
+        <Archive sha1sum="fda637ad6dd6013e197d3977a970368495fec32c" type="tarxz">mirrors://gnome/brasero/3.6/brasero-3.6.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="2.0.0">gconf-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency versionFrom="0.10.0">gstreamer-devel</Dependency>
+            <Dependency versionFrom="0.10.0">gst-plugins-base-devel</Dependency>
+            <Dependency versionFrom="1.0.0">libunique-devel</Dependency>
+            <Dependency versionFrom="2.0.0">gconf-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency versionFrom="0.1.0">libcanberra-devel</Dependency>
+            <Dependency>libxml2-devel</Dependency>
+            <Dependency>libburn-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>totem-pl-parser-devel</Dependency>
+            <Dependency>docbook-xml</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>brasero</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>freetype</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>totem-pl-parser</Dependency>
+            <Dependency>gmime</Dependency>
+            <Dependency>nautilus</Dependency>
+            <Dependency>libnotify</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+    </Package>
+    <Package>
+        <Name>brasero-devel</Name>
+        <RuntimeDependencies>
+            <Dependency release="current">brasero</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="data">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-22</Date>
+            <Version>3.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
+

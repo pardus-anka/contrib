@@ -1,0 +1,114 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gedit</Name>
+        <Homepage>https://live.gnome.org/Gedit</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>gedit</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Default text editor for GNOME</Summary>
+        <Description>gedit is a small and lightweight text editor for the GNOME environment.</Description>
+        <Archive sha1sum="60d969d9e9b724a8fe3e1ae48098d38c1ab4bcb6" type="tarxz">mirrors://gnome/gedit/3.6/gedit-3.6.2.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>atk-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>enchant-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency versionFrom="3.0.0">gtksourceview-devel</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>libICE-devel</Dependency>
+            <Dependency>libSM-devel</Dependency>
+            <Dependency>pango-devel</Dependency>
+            <Dependency>python-gtk-devel</Dependency>
+            <Dependency>python-gtksourceview</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>gobject-introspection-devel</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gedit</Name>
+        <RuntimeDependencies>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>enchant</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency versionFrom="3.0.0">gtksourceview</Dependency>
+            <Dependency>iso-codes</Dependency>
+            <Dependency>libICE</Dependency>
+            <Dependency>libSM</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>python-gtk</Dependency>
+            <Dependency>python-gtksourceview</Dependency>
+            <Dependency>gobject-introspection</Dependency>
+            <Dependency>libpeas</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/gedit</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gedit-devel</Name>
+        <Summary>Development files for gedit</Summary>
+        <RuntimeDependencies>
+            <Dependency>gtksourceview-devel</Dependency>
+            <Dependency release="current">gedit</Dependency>
+            <Dependency>libpeas-devel</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+            <Path fileType="man">/usr/share/man/man3</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gedit-docs</Name>
+        <IsA>data:doc</IsA>
+        <Summary>gedit reference documents</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gedit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share/gtk-doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

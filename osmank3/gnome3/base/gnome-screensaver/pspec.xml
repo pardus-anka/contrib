@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-screensaver</Name>
+        <Homepage>https://live.gnome.org/GnomeScreensaver</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>GNOME screensaver</Summary>
+        <Description>GNOME offical screensaver application.</Description>
+        <Archive sha1sum="22af6dfa9c55903a7624bc093718ef472b86cb51" type="tarxz">mirrors://gnome/gnome-screensaver/3.6/gnome-screensaver-3.6.1.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gnome-menus-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>libXrandr-devel</Dependency>
+            <Dependency>libXScrnSaver-devel</Dependency>
+            <Dependency>libXxf86dga-devel</Dependency>
+            <Dependency>libXxf86vm-devel</Dependency>
+            <Dependency>xscreensaver</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-screensaver</Name>
+        <RuntimeDependencies>
+            <Dependency>gconf</Dependency>
+            <Dependency>libglade</Dependency>
+            <Dependency>gnome-menus</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libXScrnSaver</Dependency>
+            <Dependency>libXxf86dga</Dependency>
+            <Dependency>libXxf86vm</Dependency>
+            <Dependency>xscreensaver</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency>libxklavier</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/desktop-directories</Path>
+            <Path fileType="data">/usr/share/gnome-screensaver</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/backgrounds</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gnome-background-properties</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.1</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

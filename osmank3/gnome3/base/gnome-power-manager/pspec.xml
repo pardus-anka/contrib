@@ -1,0 +1,92 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-power-manager</Name>
+        <Homepage>http://projects.gnome.org/gnome-power-manager</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>gnome-power-manager</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>GNOME power manager</Summary>
+        <Description>GNOME Power Manager is a session daemon that acts as a policy agent on top of UPower.</Description>
+        <Archive sha1sum="f7bf768cfefc3ac0a0d75ac74fa5f8e7f9025bce" type="tarxz">mirrors://gnome/gnome-power-manager/3.6/gnome-power-manager-3.6.0.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>libgnome-keyring-devel</Dependency>
+            <Dependency>libnotify-devel</Dependency>
+            <Dependency>libwnck-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>gnome-panel-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency>gstreamer-devel</Dependency>
+            <Dependency>libXext-devel</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>docbook-xml</Dependency>
+            <Dependency>libunique-devel</Dependency>
+            <Dependency>upower-devel</Dependency>
+        </BuildDependencies>
+        <!--Patches>
+            <Patch>always-show-icon.patch</Patch>
+            <Patch>pardus-menus.patch</Patch>
+        </Patches-->
+    </Source>
+
+    <Package>
+        <Name>gnome-power-manager</Name>
+        <RuntimeDependencies>
+            <Dependency>libgnome-keyring</Dependency>
+            <Dependency>hal</Dependency>
+            <Dependency>libnotify</Dependency>
+            <Dependency>libwnck</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>gnome-panel</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>gnome-doc-utils</Dependency>
+            <Dependency>upower</Dependency>
+            <Dependency>libunique</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libXrandr</Dependency>
+            <Dependency>libcanberra</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc/xdg</Path>
+            <Path fileType="config">/etc/gconf</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gnome-2.0</Path>
+            <Path fileType="data">/usr/share/gnome-power-manager</Path>
+            <Path fileType="data">/usr/share/gnome</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/omf</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <Provides>
+            <COMAR script="package.py">System.Package</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+       <Update release="1">
+            <Date>2013-02-21</Date>
+            <Version>3.6.0</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

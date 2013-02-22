@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnome-settings-daemon</Name>
+        <Homepage>http://www.gnome.org/</Homepage>
+        <Packager>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>System settings daemon for GNOME desktop</Summary>
+        <Description>gnome-settings-daemon shares GNOME specific settings with other applications via DBus connection.</Description>
+        <Archive sha1sum="6ab132afbefc7b3335ef5dc34e07da0766c88339" type="tarxz">mirrors://gnome/gnome-settings-daemon/3.6/gnome-settings-daemon-3.6.4.tar.xz</Archive>
+        <BuildDependencies>
+            <Dependency>nss-devel</Dependency>
+            <Dependency>nspr-devel</Dependency>
+            <Dependency>cups-devel</Dependency>
+            <Dependency>gtk3-devel</Dependency>
+            <Dependency>cairo-devel</Dependency>
+            <Dependency>libXi-devel</Dependency>
+            <Dependency>gconf-devel</Dependency>
+            <Dependency versionFrom="0.7.3">libnotify-devel</Dependency>
+            <Dependency>fontconfig-devel</Dependency>
+            <Dependency>gdk-pixbuf-devel</Dependency>
+            <Dependency versionFrom="3.0.0">libxklavier-devel</Dependency>
+            <Dependency>libgnomekbd-devel</Dependency>
+            <Dependency>gnome-desktop-devel</Dependency>
+            <Dependency>gnome-common</Dependency>
+            <Dependency>gsettings-desktop-schemas</Dependency>
+            <Dependency>gnome3-desktop</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnome-settings-daemon</Name>
+        <RuntimeDependencies>
+            <Dependency>nss</Dependency>
+            <Dependency>nspr</Dependency>
+            <Dependency>cups</Dependency>
+            <Dependency>gtk3</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>libXi</Dependency>
+            <Dependency>gconf</Dependency>
+            <Dependency versionFrom="0.7.3">libnotify</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+            <Dependency versionFrom="3.0.0">libxklavier</Dependency>
+            <Dependency>libgnomekbd</Dependency>
+            <Dependency>gnome-desktop</Dependency>
+            <Dependency>pulseaudio-libs</Dependency>
+            <Dependency>libcanberra-gtk3</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>gtk-qt-engine</Package>
+            <Package>gtk-qt-engine-kde4</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="executable">/usr/libexec</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/gnome-control-center</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon</Path>
+            <Path fileType="data">/usr/share/gnome-settings-daemon-3.0</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="data">/usr/share/polkit-1</Path>
+            <Path fileType="data">/usr/share/GConf</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>gnome-settings-daemon-devel</Name>
+        <Summary>Development files for gnome-settings-daemon</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">gnome-settings-daemon</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib/pkgconfig</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2013-02-21</Date>
+            <Version>3.6.4</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Karagöz</Name>
+            <Email>osmank3@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
