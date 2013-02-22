@@ -7,6 +7,7 @@
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import kde4
+from pisi.actionsapi import qt4
 from pisi.actionsapi import get
 
 NoStrip=["/usr/share"]
