@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>mate-character-map</Name>
+        <Homepage>http://www.mate-desktop.org</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Packager>
+        <License>GPLv2.0</License>        
+        <License>LGPLv2.1</License>
+        <Icon>mate-character-map</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>MATE Unicode Charmap</Summary>
+        <Description>Unicode character map viewer</Description>
+        <Archive sha1sum="d6615cba3d1643032c9183f7a34106f311d3f9ae" type="tarxz">http://pub.mate-desktop.org/releases/1.5/mate-character-map-1.5.0.tar.xz</Archive>
+	<BuildDependencies>
+	    <Dependency>icon-theme-hicolor</Dependency>
+	</BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>mate-character-map</Name>
+	<RuntimeDependencies>
+	    <Dependency>icon-theme-hicolor</Dependency>
+	</RuntimeDependencies>
+        <Files>
+	    <Path fileType="data">/usr/share/</Path>
+	    <Path fileType="bin">/usr/bin</Path>
+            <Path fileType="config">/usr/lib/</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>mate-character-map-devel</Name>
+        <Summary>mate-character-map için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency release="current">mate-character-map</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2013-02-23</Date>
+            <Version>1.5.0</Version>
+            <Comment>First Release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>
+    </History>
+</PISI>
