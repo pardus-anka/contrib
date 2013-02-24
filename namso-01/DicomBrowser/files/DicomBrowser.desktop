@@ -1,0 +1,15 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=DicomBrowser
+GenericName=Medical image conversion tool
+GenericName[tr]=Medikal görüntü çevirme aracı
+Comment=Medical image conversion tool
+Comment[tr]=Medikal görüntü çevirme aracı
+Icon=DicomBrowser
+Exec=DicomBrowser
+Terminal=false
+StartupNotify=false
+Categories=Categories=Application;Graphics;Medical;

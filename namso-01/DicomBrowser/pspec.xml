@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>DicomBrowser</Name>
+        <Homepage>http://nrg.wustl.edu/software/dicom-browser</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Packager>
+        <License>DicomBrowser Software License</License>
+        <Icon>DicomBrowser</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Nowadays, all the image capturing devices for medical purposes use the same image format: DICOM.</Summary>
+        <Description>DicomBrowser is an application for inspecting and modifying DICOM metadata in many files at once. A single imaging session can produce thousands of DICOM files; DicomBrowser allows users to view and edit a whole session—or even multiple sessions—at once.</Description>
+        <Archive sha1sum="4d27278c5e80b67a214a7eddd61fc7bf0a7f618f" type="targz">ftp://ftp.nrg.wustl.edu/pub/DicomBrowser/DicomBrowser-1.5.2.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>DicomBrowser</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/java</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomBrowser.bat">DicomBrowser.bat</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomRemap.bat">DicomRemap.bat</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomSummarize.bat">DicomSummarize.bat</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomBrowser">DicomBrowser</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomRemap">DicomRemap</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/DicomSummarize">DicomSummarize</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/DicomBrowser.desktop">DicomBrowser.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/DicomBrowser.png">DicomBrowser.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2013-02-24</Date>
+            <Version>1.5.2</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>
+    </History>
+</PISI>

@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>kradview</Name>
+        <Summary xml:lang="en">Nowadays, all the image capturing devices for medical purposes use the same image format: DICOM.</Summary>
+        <Description xml:lang="en">Nowadays, all the image capturing devices for medical purposes use the same image format: DICOM. DICOM stands for Digital Imaging and COmmunications in Medicine; and it is a very rich image format, independent from the capturing device and the visualization platform.</Description>
+    </Source>
+
+    <Package>
+        <Name>kradview-devel</Name>
+        <Summary xml:lang="tr">kradview için geliştirme dosyaları</Summary>
+    </Package>
+</PISI>

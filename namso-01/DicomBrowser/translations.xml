@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>DicomBrowser</Name>
+        <Summary xml:lang="en">DicomBrowser is an application for inspecting and modifying DICOM metadata in many files at once.</Summary>
+        <Description xml:lang="en">DicomBrowser is an application for inspecting and modifying DICOM metadata in many files at once. A single imaging session can produce thousands of DICOM files; DicomBrowser allows users to view and edit a whole session—or even multiple sessions—at once.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kradview</Name>
+        <Homepage>http://www.kradview.com</Homepage>
+        <Packager>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>kradview</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Nowadays, all the image capturing devices for medical purposes use the same image format: DICOM.</Summary>
+        <Description>Nowadays, all the image capturing devices for medical purposes use the same image format: DICOM. DICOM stands for Digital Imaging and COmmunications in Medicine; and it is a very rich image format, independent from the capturing device and the visualization platform.</Description>
+        <Archive sha1sum="ee4053c1e1b233cfe50ed4675713d6e146359cae" type="targz">http://www.orcero.org/irbis/kradview/kradview-1.1.0.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>qt3-devel</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>kradview</Name>
+        <RuntimeDependencies>
+            <Dependency>qt3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/icons</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/vala</Path>
+            <Path fileType="data">/usr/share/xnoise</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>kradview-devel</Name>
+        <Summary>kradview için geliştirme dosyaları</Summary>
+        <RuntimeDependencies>
+            <Dependency>kradview</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+	    <Update release="1">
+            <Date>2013-02-24</Date>
+            <Version>1.1.0</Version>
+            <Comment>First release</Comment>
+            <Name>Osman Erkan</Name>
+            <Email>osman.erkan@yandex.com</Email>
+        </Update>
+    </History>
+</PISI>
